@@ -49,7 +49,7 @@ const CommonWordsPage = () => {
   const [text, setText] = useState("")
   const [commonWords, setCommonWords] = useState([])
   const [isShow, setIsShow] = useState(true)
-  const [minCount, setMinCount] = useState(5)
+  const [minCount, setMinCount] = useState(10)
 
   // handlers
   const handleAddWords = async (e) => {
