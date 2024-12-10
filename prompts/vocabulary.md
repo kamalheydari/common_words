@@ -1,5 +1,5 @@
 meta-llama/Meta-Llama-3.1-405B-Instruct-FP8
-6.  As an expert in vocabulary building and web penetration testing, I am tasked with creating a comprehensive vocabulary list from the book "HTTP - The Definitive Guide" tailored for beginners in web penetration testing with beginners English language proficiency.
+6.  As an expert in vocabulary building and web penetration testing, I am tasked with creating a comprehensive vocabulary list from the book "Linux in Action" tailored for beginners in web penetration testing with beginners English language proficiency.
 
 Requirements:
 - Use examples related to the book or computing to illustrate the meaning of each term.

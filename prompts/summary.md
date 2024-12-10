@@ -1,16 +1,14 @@
-Summary     meta-llama/Meta-Llama-3.1-405B-Instruct-FP8
-As an expert in summarization, outlining, and structuring, as well as a web penetration tester, I am tasked with creating a concise and informative summary of the book "HTTP - The Definitive Guide" tailored for beginners in web penetration testing with intermediate English language proficiency.
+Summary meta-llama/Meta-Llama-3.1-405B-Instruct-FP8
+As an expert in summarization, outlining, and structuring, as well as a web penetration tester, I am tasked with creating a concise and informative summary of the book "LPIC-1 version 5" tailored for beginners in web penetration testing with intermediate English language proficiency.
 
 Requirements:
+
 - Provide a brief main overview section at the beginning
 - Use bullet points, titled sections, and bolded key terms for easy and quick review
-- Use fewer words to summarize the content
-- Include additional and important information not mentioned in the content about key termes
 - Format the summary in HTML, using:
-     - <h3> tag for the Main Overview title
-     - <b> tag for bolded key terms
-     - <table> tag for any data tables mentioned in the content
-- Provide further explanations of key terms beyond what is covered in the original content. Avoid repeating information and focus on adding new insights and details.
+  - <h3> tag for the Main Overview title
+  - <b> tag for bolded key terms
+  - <table> tag for any data tables mentioned in the content
 
 Please provide the summary in HTML format, without any additional comments or explanations.
 
@@ -58,7 +56,7 @@ requests as if it was the origin server for the resource. The client may not be 
 is communicating with a gateway.
 For example, an HTTP/FTP gateway receives requests for FTP URIs via HTTP
 requests but fetches the documents using the FTP protocol (see Figure 1-13). The
-resulting document is packed into an HTTP message and sent to the client. 
+resulting document is packed into an HTTP message and sent to the client.
 
 Tunnels
 Tunnels are HTTP applications that, after setup, blindly relay raw data between two
@@ -81,11 +79,14 @@ robots” (see Figure 1-15). Spiders wander the Web to build useful archives of 
 content, such as a search engine’s database or a product catalog for a comparisonshopping robot.
 
 Expected Answer:
-    <section>
-    <h2>Architectural Components of the Web</h2>
 
-    <h3>Main Overview</h3>
+<section>
+<h2>Architectural Components of the Web</h2>
+
+    <div>
+    <h4>Main Overview</h4>
     <p>The web consists of various applications that facilitate communication between clients and servers.</p>
+    </div>
 
     <h3>Proxies</h3>
     <p>Proxies sit between clients and servers, receiving and relaying HTTP requests. They are used for:</p>
@@ -126,46 +127,4 @@ Expected Answer:
     <li><b>Automated agents</b>: machine-automated programs that issue HTTP transactions and fetch content, such as spiders and web robots</li>
     </ul>
 
-    <div>
-    <h3>Additional Information:</h3>
-    
-    <h4>Proxies:</h4>
-            <ul>
-            <li>
-                Proxies can also be used for load balancing, where they distribute incoming requests evenly across multiple servers to prevent any single server from
-                becoming overwhelmed.
-            </li>
-            <li>Anonymous proxies do not reveal the original IP address of the client, providing anonymity for users.</li>
-            </ul>
-
-            <h4>Caches:</h4>
-            <ul>
-            <li>
-                Cached content can be invalidated or updated based on rules set by the administrator or automatically when new versions of the content become
-                available.
-            </li>
-            <li>
-                Content Delivery Networks (CDNs) use distributed networks of caches to deliver content faster to end-users based on their geographical location.
-            </li>
-            </ul>
-
-            <h4>Gateways:</h4>
-            <ul>
-            <li>Gateways can also translate between different encoding formats, such as converting text files to HTML for display in a browser.</li>
-            <li>Some gateways can perform transformations on data, like reformatting XML data into JSON format.</li>
-            </ul>
-
-            <h4>Tunnels:</h4>
-            <ul>
-            <li>Tunneling can also help avoid network restrictions or filters that block certain types of traffic.</li>
-            <li>HTTP tunnels can be implemented using various techniques, such as SOCKS proxying or DNS tunneling.</li>
-            </ul>
-            
-            <h4>Agents:</h4>
-            <ul>
-            <li>Agents can include command-line tools, mobile apps, desktop software, IoT devices, and more.</li>
-            <li>Malicious agents, such as malware bots, can pose serious security threats by performing unauthorized actions or stealing sensitive information.</li>
-            </ul>
-
-    </div>
     </section>
