@@ -1,4 +1,3 @@
-Summary meta-llama/Meta-Llama-3.1-405B-Instruct-FP8
 As an expert in summarization, outlining, and structuring, as well as a web penetration tester, I am tasked with creating a concise and informative summary of the book "LPIC-1 version 5" tailored for beginners in web penetration testing with intermediate English language proficiency.
 
 Requirements:
