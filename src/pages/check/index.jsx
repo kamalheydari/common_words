@@ -61,7 +61,7 @@ const CategoryPage = (props) => {
             </button>
           </form>
           <p className='bg-gray-950/40 p-2 rounded shadow'>
-            <span className='font-bold'>Words length: </span> {checkedWords.length > 0 && checkedWords.length}
+            <span className='font-bold'>Words length: </span> {checkedWords?.length > 0 && checkedWords?.length}
           </p>
           <div className='space-x-4'>
             <button className='bg-rose-200 text-rose-900 p-1.5 rounded shadow' onClick={() => setMode("line")}>

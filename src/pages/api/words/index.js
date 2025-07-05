@@ -7,28 +7,30 @@ export default async function handler(req, res) {
 
     const { words, category } = req.body
 
-    if (!words || !category) {
-      return res.status(400).json({ error: "Words and category are required" })
+    if (!words || !category || !Array.isArray(words)) {
+      return res.status(400).json({ error: "Words (array) and category are required" })
     }
 
-    const wordsToInsert = []
+    const formattedWords = [...new Set(words.map(w => w.trim().toLowerCase()))]
 
-    for (const word of words) {
-      const formatedWord = word.trim()
-      const existingWord = await Word.findOne({ title: { $regex: formatedWord, $options: "i" } })
-      if (!existingWord) {
-        wordsToInsert.push({ title: formatedWord, category })
-      }
-    }
+    const existingWords = await Word.find({
+      title: { $in: formattedWords.map(w => new RegExp(`^${w}$`, "i")) }
+    })
+
+    const existingTitles = new Set(existingWords.map(w => w.title.toLowerCase()))
+
+    const wordsToInsert = formattedWords
+      .filter(w => !existingTitles.has(w))
+      .map(w => ({ title: w, category }))
 
     if (wordsToInsert.length > 0) {
       await Word.insertMany(wordsToInsert)
-      res.status(201).json({ msg: "Words inserted successfully" })
+      return res.status(201).json({ msg: "Words inserted successfully" })
     } else {
-      res.status(200).json({ msg: "No new words to insert" })
+      return res.status(200).json({ msg: "No new words to insert" })
     }
   } catch (error) {
     console.error(error)
-    res.status(500).json({ error: "Failed to insert words" })
+    return res.status(500).json({ error: "Failed to insert words" })
   }
 }
